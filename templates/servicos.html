@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html id="inicio" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    
+<header>
+<nav class="nav">
+    
+<img class="logo" src="{{ url_for('static', filename='2558247.png') }}">
+
+<button class="hamburger-icon"></button>
+        
+<ul class="nav_list">
+<li><a href="{{ url_for('index') }}">Início</a></li>
+<li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+<li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+<li><a href="{{ url_for('contato') }}">Contato</a></li>
+</ul>
+    </nav>
+</header>
+    
+    
+<section class="galerias">
+   <div id="inicio" class="galeria">
+      <div class="swiper-container imagens swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 1"></div>
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 2"></div>
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 3"></div>
+            </div>
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        
+        <p>IMPRESSÃO EM TECIDOS</p>
+<a class="links" href="{{ url_for('form') }}">Orçamento</a>
+<a class="links" href="#tecidos">detalhes</a>
+</div>
+
+<div class="galeria">
+        <div class="swiper-container imagens swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 1"></div>
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 2"></div>
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 3"></div>
+            </div>
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+<p>IMPRESSÃO EM MATERIAIS PLÁSTICOS</p>
+<a class="links" href="{{ url_for('form') }}">Orçamento</a>
+<a class="links" href="#plastico">detalhes</a>
+</div>
+
+
+<div class="galeria">
+        <div class="swiper-container imagens swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 1"></div>
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 2"></div>
+                <div class="swiper-slide"><img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Trabalho de Serigrafia 3"></div>
+            </div>
+            <!-- Botões de navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+           <p>IMPRESSÃO EM PAPEL</p>
+          <a class="links" href="{{ url_for('form') }}">Orçamento</a>
+           <a class="links" href="#papel">detalhes</a>
+</div>
+</section>
+
+
+<div class="detalhes">
+<div class="tecidos" id="tecidos">
+<h2>IMPRESSÃO EM TECIDOS</h2>
+
+<p><strong>PROCESSO:</strong> Começamos preparando uma tela com o design desejado e em seguida esticamos o tecido sobre uma mesa de impressão. A tinta é então aplicada na tela e espalhada uniformemente sobre o tecido, passando apenas pelas áreas permeáveis da tela, criando assim o design desejado.</p>
+
+<p><strong>GARANTIA:</strong> Antes de começarmos a produção em larga escala, fornecemos uma prova do design para sua aprovação. Isso nos permite ajustar qualquer detalhe necessário antes de imprimir em todos os tecidos. Além disso, nossa equipe de produção é altamente treinada para garantir a precisão e qualidade em cada impressão.</p>
+
+<p><strong>TIPOS DE TECIDOS:</strong> Temos a capacidade de imprimir em uma variedade de tecidos, desde algodão e poliéster até misturas mais complexas. Se você tiver um tipo específico de tecido em mente, podemos discutir suas opções e garantir que o processo de impressão seja adequado para suas necessidades.</p>
+
+<p><strong>ENTREGAS E CUSTOS:</strong> Os prazos de entrega e os custos podem variar dependendo do tamanho do pedido e da complexidade do design. Geralmente, podemos fornecer uma estimativa de prazo e custo após discutirmos os detalhes do seu projeto. Estamos comprometidos em fornecer um serviço rápido e de alta qualidade a preços competitivos.</p>
+</div>
+
+
+
+<div class="plastico" id="plastico">
+<h2>IMPRESSÃO EM MATERIAIS PLÁSTICOS</h2>
+
+<p><strong>PROCESSO:</strong> Começamos preparando uma tela com o design desejado e, em seguida, aplicamos a tinta sobre o material plástico, passando apenas pelas áreas permeáveis da tela, criando assim o design desejado nos adesivos.</p>
+
+<p><strong>DURABILIDADE:</strong> Nossos adesivos impressos por serigrafia são conhecidos pela sua durabilidade e resistência. Usamos tintas de alta qualidade e técnicas de impressão precisas para garantir que os adesivos permaneçam vibrantes e legíveis, mesmo quando expostos a condições adversas, como chuva e sol.</p>
+
+<p><strong>TIPOS DE PLÁSTICOS:</strong> Temos a capacidade de imprimir em uma variedade de plásticos, incluindo vinil, PVC, PET e muitos outros. Se você tiver um tipo específico de plástico em mente para seus adesivos, podemos discutir suas opções e garantir que o processo de impressão seja adequado para suas necessidades.</p>
+
+<p><strong>ENTREGAS E CUSTOS:</strong> Os prazos de entrega e os custos podem variar dependendo do tamanho do pedido e da complexidade do design. Geralmente, podemos fornecer uma estimativa de prazo e custo após discutirmos os detalhes do seu projeto. Estamos comprometidos em fornecer um serviço rápido e de alta qualidade a preços competitivos.</p>
+</div>
+
+<div class="papel" id="papel">
+<h2>IMPRESSÃO EM PAPEL</h2>
+<p><strong>PROCESSO:</strong> Começamos preparando uma tela com o design desejado e, em seguida, aplicamos a tinta sobre o papel, passando apenas pelas áreas permeáveis da tela, criando assim o design desejado nos pôsteres.</p>
+
+<p><strong>QUALIDADE:</strong> Usamos tintas de alta qualidade e técnicas de impressão precisas para garantir que os pôsteres fiquem vibrantes e legíveis, com cores nítidas e detalhes bem definidos.</p>
+
+<p><strong>TIPOS DE PAPEL:</strong> Temos a capacidade de imprimir em uma variedade de papéis, desde papéis mais finos e leves até papéis mais grossos e texturizados. Se você tiver um tipo específico de papel em mente para seus pôsteres, podemos discutir suas opções e garantir que o processo de impressão seja adequado para suas necessidades.</p>
+
+<p><strong>ENTREGAS E CUSTOS:</strong> Os prazos de entrega e os custos podem variar dependendo do tamanho do pedido e da complexidade do design. Geralmente, podemos fornecer uma estimativa de prazo e custo após discutirmos os detalhes do seu projeto. Estamos comprometidos em fornecer um serviço rápido e de alta qualidade a preços competitivos.</p>
+</div>
+<a href="#inicio"> <img src="{{ url_for('static', filename='109617.png') }}"></a>
+</div>
+<a href="https://wa.me/5586999145517"><img class="icon_whatsaap" src="{{ url_for('static', filename='whatsapp.png') }}" ></a>
+    <footer>
+<!-- Adicione um rodapé com informações de contato ou links úteis -->
+        <p>&copy; 2024 Seu Nome de Empresa</p>
+<div class="rodape">
+<a href="https://www.instagram.com/daviddev_ofc?igsh=NGVhN2U2NjQ0Yg=="><img src="{{ url_for('static', filename='INSTA.png') }}" ></a>
+<a href="https://www.facebook.com/profile.php?id=100024556928875"><img src="{{ url_for('static', filename='FACE.png') }}" ></a>
+<a href="https://github.com/Davidcardososite"><img src="{{ url_for('static', filename='GIT.png') }}" ></a>
+</div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mySwiper = new Swiper('.imagens', {
+                // Parâmetros de configuração do Swiper aqui
+                slidesPerView: 1,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
+<script src="{{ url_for('static', filename='java.js') }}"></script>
+</body>
+</html>

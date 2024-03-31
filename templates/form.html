@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Imagem</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    
+<header>
+<nav class="nav">
+    
+<img class="logo" src="{{ url_for('static', filename='2558247.png') }}">
+
+<button class="hamburger-icon"></button>
+        
+<ul class="nav_list">
+<li><a href="{{ url_for('index') }}">Início</a></li>
+<li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+<li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+<li><a href="{{ url_for('contato') }}">Contato</a></li>
+
+</ul>
+    </nav>
+</header>
+    
+    
+    
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+<h1>UPLOAD DA IMAGEM</h1>
+<label for="imageUpload" class="custom-file-upload">
+            <span>SELECIONAR IMAGEM</span>
+        </label>
+        <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required>
+<p id="selectedImageName"></p>
+<h1>TIPO DE MATERIAL</h1>
+        <select id="material" name="material">
+            <option value="tecido">TECIDO</option>
+            <option value="plastico">PLÁSTICO</option>
+            <option value="papel">PAPEL</option>
+        </select><br><br>
+     <div class="div_color">
+<label for="quantity">QUANTIDADE DE CORES</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+        <label  class="cores" for="color">CORES</label>
+        <input type="color" id="color" name="color"><br><br>
+        <ul id="colorList"></ul> <!-- Lista para exibir as cores selecionadas -->
+        <!-- Adicione este elemento para exibir as cores selecionadas -->
+        <div id="selectedColors"></div><br><br>
+<button type="button" id="clearColors">LIMPAR</button>
+</div>
+
+<div class="contatos">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">TELEFONE</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+</div>
+        <input type="submit" value="ENVIAR PEDIDO">
+        <p class="paginaform">aguarde um momento para o envio do seu pedido ser recebido</p>
+    </form>
+<a href="https://wa.me/5586999145517"><img class="icon_whatsaap" src="{{ url_for('static', filename='whatsapp.png') }}" ></a>
+    <footer>
+<!-- Adicione um rodapé com informações de contato ou links úteis -->
+        <p>&copy; 2024 Seu Nome de Empresa</p>
+<div class="rodape">
+<a href="https://www.instagram.com/daviddev_ofc?igsh=NGVhN2U2NjQ0Yg=="><img src="{{ url_for('static', filename='INSTA.png') }}" ></a>
+<a href="https://www.facebook.com/profile.php?id=100024556928875"><img src="{{ url_for('static', filename='FACE.png') }}" ></a>
+<a href="https://github.com/Davidcardososite"><img src="{{ url_for('static', filename='GIT.png') }}" ></a>
+</div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Evento de escuta para o input type="file"
+    $('#imageUpload').change(function() {
+        // Captura o nome da imagem selecionada
+        var fileName = $(this).val().split('\\').pop();
+        // Exibe o nome da imagem em um parágrafo
+        $('#selectedImageName').text(fileName);
+    });
+
+    var selectedColors = []; // Array para armazenar todas as cores selecionadas
+
+    $('#uploadForm').submit(function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        var formData = new FormData(this);
+        // Limpar formData de cores anteriores antes de adicionar as cores selecionadas novamente
+        formData.delete('color');
+        // Adiciona as cores selecionadas ao formData
+        selectedColors.forEach(function(color) {
+            formData.append('color', color);
+        });
+
+        $.ajax({
+            url: '/upload',
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+                alert('Pedido enviado com sucesso!');
+                // Limpar o formulário após o envio bem-sucedido
+                $('#uploadForm')[0].reset();
+                // Limpar a lista de cores selecionadas
+                selectedColors = [];
+                // Remover todas as cores selecionadas da interface
+                $('#selectedColors').empty();
+                // Limpar a lista de cores
+                $('#colorList').empty();
+            },
+            error: function(error) {
+                alert('Ocorreu um erro ao enviar o pedido.');
+                console.error(error);
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    });
+
+    // Adicionar função ao selecionar uma cor
+    $('#color').change(function() {
+        var selectedColor = $(this).val();
+        // Verificar se a cor já foi selecionada antes de adicioná-la à lista
+        if (!selectedColors.includes(selectedColor)) {
+            // Adicionar a cor selecionada à lista de cores na interface
+            $('#selectedColors').append('<div class="selected-color" style="background-color:' + selectedColor + '"></div>');
+            // Adicionar a cor à lista de cores selecionadas com seu nome
+            $('#colorList').append('<li>Cor ' + (selectedColors.length + 1) + ': <span style="color:' + selectedColor + ';">' + obterNomeCor(selectedColor) + '</span></li>');
+            // Adicionar a cor selecionada ao array de cores selecionadas
+            selectedColors.push(selectedColor);
+        }
+    });
+
+    // Adicionar função para limpar cores selecionadas
+    $('#clearColors').click(function() {
+        // Limpar a lista de cores selecionadas na interface
+        $('#selectedColors').empty();
+        // Limpar a lista de cores
+        $('#colorList').empty();
+        // Limpar o array de cores selecionadas
+        selectedColors = [];
+    });
+});
+
+// Função para obter o nome da cor com base no código hexadecimal
+function obterNomeCor(hex) {
+    var cores = {
+        '#ff0000': 'Vermelho',
+        '#ff7f00': 'Laranja',
+        '#ffff00': 'Amarelo',
+        '#00ff00': 'Verde',
+        '#008000': 'Verde Escuro',
+        '#0000ff': 'Azul',
+        '#4b0082': 'Índigo',
+        '#9400d3': 'Violeta',
+        '#ff00ff': 'Magenta',
+        '#ffc0cb': 'Rosa',
+        '#a52a2a': 'Marrom',
+        '#ffffff': 'Branco',
+        '#000000': 'Preto',
+        '#808080': 'Cinza',
+        '#800080': 'Roxo',
+        '#00ffff': 'Ciano',
+        '#ffff80': 'Lima',
+        '#ffd700': 'Dourado',
+        '#8b4513': 'Marrom Sela',
+        '#ff4500': 'Laranja Vermelho',
+        '#ffe4b5': 'Amêndoa',
+        '#7fffd4': 'Aquamarina',
+        '#b0e0e6': 'Azul Pólvora',
+        '#dda0dd': 'Violeta Médio',
+        '#ff6347': 'Vermelho Tomate',
+        // Adicione mais cores conforme necessário
+    };
+    // Retorna o nome da cor se estiver na lista, caso contrário retorna o próprio código hexadecimal
+    return cores[hex.toLowerCase()] || hex;
+}
+</script>
+
+<script src="{{ url_for('static', filename='java.js') }}"></script>
+</body>
+</html>

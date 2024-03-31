@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    
+    
+<header>
+<nav class="nav">
+    
+<img class="logo" src="{{ url_for('static', filename='2558247.png') }}">
+
+<button class="hamburger-icon"></button>
+        
+<ul class="nav_list">
+<li><a href="{{ url_for('index') }}">Início</a></li>
+<li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+<li><a href="{{ url_for('servicos') }}">Serviços</a></li>
+<li><a href="{{ url_for('contato') }}">Contato</a></li>
+</ul>
+    </nav>
+</header>
+    
+    
+    <section class="pagina_sobre">
+      <h2>SOBRE NÓS</h2>
+      <p>Na "seu nome de serigrafia", combinamos técnicas tradicionais de serigrafia com uma abordagem inovadora e criativa para imprimir em uma variedade de substratos. Fundada por um grupo de artistas apaixonados, nosso estúdio é um espaço vibrante onde a criatividade floresce e as ideias ganham vida.</p>
+      <!-- Adicione a galeria de imagens -->
+      <div class="galeria_sobre">
+        <img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Estúdio da Arte em Tela">
+      </div>
+      <p>Nossa equipe talentosa de designers gráficos e artesãos habilidosos está comprometida em transformar as visões dos nossos clientes em realidade. Cada projeto é tratado com cuidado e atenção aos detalhes, garantindo resultados impressionantes e personalizados.</p>
+      
+<div class="galeria_sobre">
+        <img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Exemplo de Trabalho Impresso">
+      </div>
+      
+      
+      <p>Além disso, nós da "seu nome de serigrafia", valorizamos a sustentabilidade e o respeito ao meio ambiente. Utilizamos tintas e materiais eco-friendly sempre que possível e buscamos constantemente maneiras de reduzir nosso impacto ambiental.</p>
+      
+<div class="galeria_sobre">
+        <img src="https://images.pexels.com/photos/1391293/pexels-photo-1391293.jpeg" alt="Exemplo de Trabalho Impresso">
+      </div>
+      <p>Estamos comprometidos em fornecer um serviço de alta qualidade e uma experiência colaborativa para cada cliente que entra em nosso estúdio. Junte-se a nós na jornada da "seu nome de serigrafia"!</p>
+      <p><a href="{{ url_for('contato') }}">Entre em contato</a> conosco para discutir seu próximo projeto de impressão.</p>
+    </section>
+  
+<a href="https://wa.me/5586999145517"><img class="icon_whatsaap" src="{{ url_for('static', filename='whatsapp.png') }}" ></a>
+<footer>
+<!-- Adicione um rodapé com informações de contato ou links úteis -->
+        <p>&copy; 2024 Seu Nome de Empresa</p>
+<div class="rodape">
+<a href="https://www.instagram.com/daviddev_ofc?igsh=NGVhN2U2NjQ0Yg=="><img src="{{ url_for('static', filename='INSTA.png') }}" ></a>
+<a href="https://www.facebook.com/profile.php?id=100024556928875"><img src="{{ url_for('static', filename='FACE.png') }}" ></a>
+<a href="https://github.com/Davidcardososite"><img src="{{ url_for('static', filename='GIT.png') }}" ></a>
+</div>
+    </footer>
+    
+<script src="{{ url_for('static', filename='java.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,1339 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@800&display=swap');
+
+
+
+body,html{
+font-family: impact;
+        font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+.logo {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    margin: 5px;
+    left: 20px;
+    color: white;
+}
+
+
+.nav {
+    justify-content: flex-end;
+    display: flex;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 995;
+}
+
+.nav_list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+
+.nav_list li {
+    margin-right: 20px;
+}
+
+.nav_list a {
+    font-size: 15px;
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav_list a:hover {
+    color: green;
+    transition: 0.4s;
+    
+}
+
+.hero {
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra suave */
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 70px;
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    color: white;
+    text-align: center;
+    background: center/cover no-repeat url('https://images.pexels.com/photos/3966277/pexels-photo-3966277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2https://images.pexels.com/photos/3966277/pexels-photo-3966277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+
+
+
+.hero p {
+    margin-top: 200px;
+    font-size: 20px;
+font-family: impact;
+        font-weight: bold;
+}
+
+
+/* Estilo para as imagens na galeria */
+
+
+.swiper-container {
+  width: 200px;
+  height: 300px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra suave */
+}
+
+.imagens img {
+    width: 200px;
+    height: 300px;
+}
+
+.galerias {
+    margin-top: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.galeria {
+    margin-bottom: 20px;
+    flex-direction: column;
+    display: flex;
+align-items: center;
+    text-align: center;
+}
+
+
+.galeria p {
+    margin: 5px;
+    text-align: center;
+    color: black;
+flex-direction: column;
+    display: flex;
+align-items: center;
+    text-align: center;
+}
+
+
+.links {
+    align-items: center;
+    text-align: center;
+flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+    font-size: 17px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 5px;
+    padding: 2px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.links:hover {
+    background-color: green;
+    transition: 0.3s;
+}
+
+/* Estilo para os botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    top: 50%; /* Posiciona os botões no centro verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição vertical dos botões *//* Garante que os botões fiquem sobre as imagens */
+    width: 40px; /* Define a largura dos botões */
+    height: 40px; /* Define a altura dos botões */
+    background-color: rgba(255, 255, 255, 0.2); /* Define uma cor de fundo com transparência */
+    border-radius: 50%; /* Transforma os botões em círculos */
+    border: none; /* Remove a borda dos botões */
+    cursor: pointer; /* Adiciona o cursor de ponteiro ao passar por cima dos botões */
+    color: green;
+    opacity: 0.7;
+}
+
+/* Estilo para o botão "Próximo" */
+.swiper-button-next {
+    right: 10px; /* Posiciona o botão "Próximo" à direita */
+}
+
+/* Estilo para o botão "Anterior" */
+.swiper-button-prev {
+    left: 10px; /* Posiciona o botão "Anterior" à esquerda */
+}
+
+
+
+
+/* estilos para a pagina serviços*/
+
+  .detalhes img {
+rotate: -90deg;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        position: fixed;
+        opacity: 0.5;
+        right: 0;
+        top: 400px;
+        margin-right: 25px;
+  }
+
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhes h2 {
+    text-align: center;
+    font-size: 10px;
+}
+
+.detalhes p {
+    font-family: Arial,Sans-Serif;
+    margin-top: 15px;
+    font-size: 7px;
+}
+
+strong {
+}
+
+
+
+.tecidos {
+    color: black;
+background-color: #D3D3D3;
+font-size: 6px;
+border-radius: 5px;
+padding: 50px;
+margin-right: 100px;
+margin-left: 100px;
+margin-bottom: 60px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.plastico {
+    color: white;
+background-color: #FF7F50;
+font-size: 6px;
+border-radius: 5px;
+padding: 50px;
+margin-right: 100px;
+margin-left: 100px;
+margin-bottom: 60px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.papel {
+    color: white;
+background-color: #1E90FF;
+font-size: 6px;
+border-radius: 5px;
+padding: 50px;
+margin-right: 100px;
+margin-left: 100px;
+margin-bottom: 60px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/*adicionando a classe animated para o
+efeito de animação clean*/
+
+.tecidos.animated,
+.plastico.animated,
+.papel.animated {
+opacity: 1;
+    transform: translateY(0);
+}
+
+
+.detalhes img {
+        rotate: -90deg;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        position: fixed;
+        opacity: 0.5;
+        right: 0;
+        top: 400px;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+
+  
+  
+/* Estilo para pagina sobre*/
+
+
+.pagina_sobre {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+
+.pagina_sobre p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 10px;
+    color: black;
+    margin: 10px;
+}
+
+
+.pagina_sobre h2 {
+    font-size: 17px;
+    text-align: center;
+    color: black;
+}
+
+.pagina_sobre a {
+    text-decoration: none;
+    color: red;
+}
+
+.galeria_sobre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    
+/*adicionando a classe animated para o
+efeito de animação clean*/
+    .galeria_sobre.animated {
+opacity: 1;
+    transform: translateY(0);
+    }
+    
+    
+    .galeria_sobre img {
+     width: 300px;
+     height: 200px;
+     border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra suave */
+    }
+  
+
+
+
+/* Estilo para pagina contatos*/
+
+
+.contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.contatos2 {
+    text-align: center;
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+border: 1px solid black;
+}
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon_whatsaap {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 350px;
+    margin: 10px;
+    z-index: 994;
+}
+
+
+
+
+
+/* Estilos para pagina formulario*/
+
+#uploadForm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.div_color {
+    gap: 10px;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-color: white;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+.contatos {
+    gap: 15px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+border: 1px solid black;
+}
+
+/* Estilo para o título */
+h1 {
+    margin-top: 30px;
+    color: black; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    text-align: center;
+}
+
+
+
+
+/* Estilo para os rótulos */
+label {
+    font-size: 17px;
+    color: black;
+}
+
+/* Estilo para os campos de entrada */
+input[type="tel"] {
+    padding: 5px; /* Espaçamento interno */
+    border: 1px solid black; /* Borda sólida com cor cinza */
+    border-radius: 5px; /* Borda arredondada */
+    box-sizing: border-box; /* Tamanho da caixa incluindo borda e preenchimento */
+}
+
+input[type="email"]{
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+border: 1px solid black; 
+}
+
+
+
+/* Estiliza a caixa de seleção de cores */
+input[type="color"] {
+    margin: 10px;
+    -webkit-appearance: none; /* Remove o estilo padrão do WebKit */
+    appearance: none; /* Remove o estilo padrão */
+    padding: 0; /* Remove o preenchimento interno */
+    width: 50px; /* Define a largura desejada */
+    height: 50px; /* Define a altura desejada */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+}
+
+/* Estiliza a borda da caixa de seleção de cores quando focada */
+input[type="color"]:focus {
+    outline: none; /* Remove o contorno de foco */
+    box-shadow: 0 0 0 2px #007bff; /* Adiciona uma sombra ao redor da caixa de seleção quando focada */
+}
+
+
+input[type="number"] {
+margin: 10px;
+padding: 5px;
+width: 50px;
+border-radius: 5px;
+box-sizing: border-box;
+border: 1px solid black; 
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    text-align: center;
+color: white;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 4px 8px;
+        cursor: pointer;
+        background-color: #808080;
+        border-radius: 5px;
+        transition: 0.4s;
+}
+.custom-file-upload:hover {
+        background-color: #4F4F4F;
+        transition: 0.4s;
+    }
+
+
+
+
+
+/* Estilo para o botão de envio */
+input[type="submit"] {
+    font-size: 15px;
+    padding: 5px; /* Espaçamento interno */
+    background-color: #28a745; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border:none;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    transition: 0.3s;
+}
+
+   
+
+/* Estilo para a lista de cores */
+#colorList {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    list-style-type: none; /* Remove os marcadores de lista */
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Estilo para as cores selecionadas */
+.selected-color {
+box-shadow: 0 0 0 2px black; /* Adiciona uma sombra ao redor da caixa de seleção quando focada */
+    width: 20px; /* Largura do quadrado de cor */
+    height: 20px; /* Altura do quadrado de cor */
+    display: flex;
+    margin-top: 5px; /* Espaçamento entre as cores */
+}
+
+
+#clearColors {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    margin-bottom: 10px;
+    background-color: #808080;
+    color: #ffffff; /* Cor do texto branca */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 1px solid black;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    transition: 0.3s;
+}
+
+#clearColors:hover {
+    background-color: #4F4F4F; /* Altera a cor de fundo ao passar por cima */
+    transition: ;
+}
+
+
+select {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+        color: white;
+        font-size: 20px;
+        background-color: green;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+}
+
+
+#selectedImageName{
+    text-align: center;
+    color: white;
+}
+
+.paginaform{
+    text-align: center;
+    color: black;
+}
+
+
+
+footer {
+    padding: 5px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    background-color: #28a745;
+    bottom: 0;
+    font-size: 10px;
+    
+  }
+  
+  
+.rodape  {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+}
+
+
+
+.rodape img {
+    width: 20px;
+    height: 20px;
+}
+
+
+#selectedImageName {
+    color: #28a745;
+    font-size: 15px;
+text-shadow: 2px 2px 2px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+}
+
+
+
+
+
+
+/* estilos para o botão hamburger-icon*/
+
+.hamburger-icon {
+    background-color: transparent;
+    width: 30px;
+    position: fixed;
+    display: none;
+    border: none;
+}
+
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+}
+
+
+.hamburger-icon::before {
+    left: 0;
+}
+
+.hamburger-icon::after {
+    top: 10px;
+    left: 0;
+
+}
+
+
+/* Estilo para transformar em X */
+.hamburger-icon.open::before {
+    transform: rotate(135deg) translate(8px, 2px);
+}
+
+.hamburger-icon.open::after {
+    transform: rotate(-135deg) translate(8px, -2px);
+}
+
+/* Estilo para telas menores */
+@media screen and (max-width: 800px) {
+    /* Estilos para telas menores aqui */
+    
+    header {
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        height: 50px;
+        top: 0;
+        margin: 0;
+        z-index: 997;
+    }
+    
+body,html{
+    background-color: white;
+font-family: impact;
+        font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+/* estilos para o menu abrir e fechar*/
+    
+    .hamburger-icon {
+    display: block;
+    /*exibe o botão*/
+    position: fixed;
+    border-top: 3px solid white;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+    
+
+    .nav_list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    margin: 0;
+    top: 0;
+    opacity: 0;
+    height: 100vh;
+    width: 0;
+    background-color: #363636;
+    z-index: 998;
+    transition: opacity 0.4s ease,width 0.4s ease;
+    overflow: hidden;
+    border-left: 2px solid white
+    
+}
+    
+.nav_list li {
+    list-style: none;
+    top: 150px;
+    margin: 0;
+    position: relative;
+    padding-top: 40px;
+}
+
+
+    /* Exibe a lista quando a classe 'open' é aplicada */
+    .nav_list.open {
+    width: 150px;
+    opacity: 1;
+}
+
+    .hamburger-icon.open {
+    position: fixed;
+    border: none;
+}
+
+
+    .nav_list a {
+        text-decoration: none;
+    font-size: 17px;
+    color: white;
+    padding-inline: 10px;
+    padding-block: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    transition: 0.3s;
+}
+
+    .nav_list a:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+    /* Aplica atraso para as transições de opacidade */
+    .nav_list li:nth-child(1) a {
+    transition-delay: 0.2s;
+}
+
+    .nav_list li:nth-child(2) a {
+    transition-delay: 0.4s;
+}
+
+    .nav_list li:nth-child(3) a {
+    transition-delay: 0.6s;
+}
+
+    .nav_list li:nth-child(4) a {
+    transition-delay: 0.8s;
+}
+
+     .open.nav_list a {
+    opacity: 1;
+}
+
+    .logo {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    margin: 5px;
+    left: 20px;
+    color: white;
+}
+
+
+
+    .hero {
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra suave */
+    margin: 10px;
+    margin-top: 70px;
+    font-size: 20px;
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    color: white;
+    background: center/cover no-repeat url('https://images.pexels.com/photos/3966277/pexels-photo-3966277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2https://images.pexels.com/photos/3966277/pexels-photo-3966277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+}
+    
+    
+    .hero p {
+    margin-top: 170px;
+    font-size: 15px;
+}
+
+    
+
+
+/* Estilo para as imagens na galeria */
+
+
+.swiper-container {
+  width: 250px;
+  height: 350px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Adiciona uma sombra suave */
+  
+}
+
+.imagens img {
+    width: 250px;
+    height: 350px;
+}
+
+.galerias {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}  
+
+
+.galeria {
+    margin-bottom: 70px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+/*adicionando a classe animated para o
+efeito de animação clean*/
+
+.galeria.animated {
+opacity: 1;
+    transform: translateY(0);
+}
+
+.galeria p {
+    text-align: center;
+    color: black;
+    margin: 5px;
+}
+.links {
+    align-items: center;
+    text-align: center;
+flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+    font-size: 17px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+
+/*adicionando a classe animated para o
+efeito de animação clean*/
+.links.animated {
+opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Estilo para os botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+    top: 50%; /* Posiciona os botões no centro verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição vertical dos botões *//* Garante que os botões fiquem sobre as imagens */
+    width: 40px; /* Define a largura dos botões */
+    height: 40px; /* Define a altura dos botões */
+    background-color: rgba(255, 255, 255, 0.2); /* Define uma cor de fundo com transparência */
+    border-radius: 50%; /* Transforma os botões em círculos */
+    border: none; /* Remove a borda dos botões */
+    cursor: pointer; /* Adiciona o cursor de ponteiro ao passar por cima dos botões */
+    color: green;
+    opacity: 0.7;
+}
+
+/* Estilo para o botão "Próximo" */
+.swiper-button-next {
+    right: 10px; /* Posiciona o botão "Próximo" à direita */
+}
+
+/* Estilo para o botão "Anterior" */
+.swiper-button-prev {
+    left: 10px; /* Posiciona o botão "Anterior" à esquerda */
+}
+
+
+
+
+/* estilos para a pagina serviços*/
+
+  .detalhes img {
+rotate: -90deg;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        position: fixed;
+        opacity: 0.5;
+        right: 0;
+        top: 400px;
+        margin-right: 25px;
+  }
+
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.detalhes h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    
+}
+
+.detalhes p {
+    margin: 20px;
+    font-size: 17px;
+}
+
+
+.tecidos {
+margin: 20px;
+    padding: 0;
+background-color: #D3D3D3;
+color: black;
+border-radius: 5px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.plastico {
+margin: 20px;
+    padding: 0;
+background-color: #FF7F50;
+color: white;
+border-radius: 5px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.papel {
+    margin: 20px;
+    padding: 0;
+background-color: #1E90FF;
+color: white;
+border-radius: 5px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/*adicionando a classe animated para o
+efeito de animação clean*/
+
+.tecidos.animated,
+.plastico.animated,
+.papel.animated {
+opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.detalhes img {
+        rotate: -90deg;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        position: fixed;
+        opacity: 0.5;
+        right: 0;
+        top: 350px;
+        margin-right: 25px;
+    }
+
+
+
+
+/* Estilo para pagina sobre*/
+
+
+.pagina_sobre {
+    margin-top: 60px;
+    
+}
+
+
+.pagina_sobre p {
+    font-size: 17px;
+    color: black;
+    margin: 10px;
+}
+
+
+.pagina_sobre h2 {
+    text-align: center;
+    color: black;
+}
+
+.pagina_sobre a {
+    text-decoration: none;
+    color: red;
+}
+
+.galeria_sobre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+/*adicionando a classe animated para o
+efeito de animação clean*/
+    .galeria_sobre.animated {
+opacity: 1;
+    transform: translateY(0);
+    }
+    
+    
+    .galeria_sobre img {
+     width: 300px;
+     height: 200px;
+     border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra suave */
+    }
+    
+    
+/* Estilo para pagina contatos*/
+
+
+.contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.contatos2 {
+    text-align: center;
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon_whatsaap {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 350px;
+    margin: 10px;
+    z-index: 994;
+}
+
+
+
+
+
+
+
+/* Estilos para pagina formulario*/
+
+#uploadForm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+
+.div_color {
+    gap: 0;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+border-radius: 5px;
+border: 1px solid black;
+}
+
+.contatos {
+border: 1px solid black;
+    gap: 0;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+}
+
+/* Estilo para o título */
+h1 {
+    margin-top: 60px;
+    color: black; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte */
+    text-align: center;
+}
+
+
+
+
+/* Estilo para os rótulos */
+label {
+    font-size: 17px;
+    color: black;
+}
+
+/* Estilo para os campos de entrada */
+input[type="tel"] {
+    margin: 10px;
+    padding: 5px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    border: 1px solid black; /* Borda sólida com cor cinza */
+    border-radius: 5px; /* Borda arredondada */
+    box-sizing: border-box; /* Tamanho da caixa incluindo borda e preenchimento */
+}
+
+input[type="email"]{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+border: 1px solid black; 
+}
+
+
+
+/* Estiliza a caixa de seleção de cores */
+input[type="color"] {
+    margin: 10px;
+    -webkit-appearance: none; /* Remove o estilo padrão do WebKit */
+    appearance: none; /* Remove o estilo padrão */
+    padding: 0; /* Remove o preenchimento interno */
+    width: 50px; /* Define a largura desejada */
+    height: 50px; /* Define a altura desejada */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+}
+
+/* Estiliza a borda da caixa de seleção de cores quando focada */
+input[type="color"]:focus {
+    outline: none; /* Remove o contorno de foco */
+    box-shadow: 0 0 0 2px #007bff; /* Adiciona uma sombra ao redor da caixa de seleção quando focada */
+}
+
+
+input[type="number"] {
+margin: 10px;
+padding: 5px;
+width: 50px;
+border-radius: 5px;
+box-sizing: border-box;
+border: 1px solid black; 
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    text-align: center;
+color: white;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 4px 8px;
+        cursor: pointer;
+        background-color: #808080;
+        border-radius: 5px;
+        transition: 0.4s;
+}
+.custom-file-upload:hover {
+        background-color: #4F4F4F;
+        transition: 0.4s;
+    }
+
+
+
+
+
+/* Estilo para o botão de envio */
+input[type="submit"] {
+    font-size: 15px;
+    padding: 5px; /* Espaçamento interno */
+    background-color: #28a745; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    border:none;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    transition: 0.3s;
+}
+
+   
+
+/* Estilo para a lista de cores */
+#colorList {
+    flex-direction: column;
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    list-style-type: none; /* Remove os marcadores de lista */
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Estilo para as cores selecionadas */
+.selected-color {
+box-shadow: 0 0 0 2px black; /* Adiciona uma sombra ao redor da caixa de seleção quando focada */
+    width: 20px; /* Largura do quadrado de cor */
+    height: 20px; /* Altura do quadrado de cor */
+    display: inline-block; /* Permite que os elementos de cores selecionadas fiquem em linha */
+    margin-right: 5px; /* Espaçamento à direita entre as cores */
+}
+
+
+#clearColors {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+    margin-bottom: 10px;
+    background-color: #808080;
+    color: #ffffff; /* Cor do texto branca */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 1px solid black;
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    transition: 0.4s;
+}
+
+#clearColors:hover {
+    background-color: #4F4F4F; /* Altera a cor de fundo ao passar por cima */
+    transition: 0.4s;
+}
+
+
+select {
+text-shadow: 1px 1px 1px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+        color: white;
+        font-size: 20px;
+        background-color: green;
+        cursor: pointer;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+}
+
+
+#selectedImageName{
+    text-align: center;
+    color: white;
+}
+
+.paginaform{
+    text-align: center;
+    color: black;
+}
+
+
+footer {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    background-color: #28a745;
+}
+
+.rodape  {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+}
+
+
+
+.rodape img {
+    width: 20px;
+    height: 20px;
+}
+
+
+#selectedImageName {
+    color: #28a745;
+    font-size: 20px;
+text-shadow: 2px 2px 2px #000000,0 0 0 #000000,0 0 0 #000000,0 0 0 #000000;
+}
+
+
+
+}
+
